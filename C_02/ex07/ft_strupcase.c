@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aanghel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/03 23:06:01 by aanghel           #+#    #+#             */
+/*   Updated: 2021/10/04 22:34:58 by aanghel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdbool.h>
+
+char	*ft_strupcase(char *str)
+{
+	int		index;
+	char	curr;
+
+	index = 0;
+	while (true)
+	{
+		curr = str[index];
+		if (curr == '\0')
+		{
+			break ;
+		}
+		if (curr >= 'a' && curr <= 'z')
+		{
+			str[index] = curr - 32;
+		}
+		index++;
+	}
+	return (str);
+}			
